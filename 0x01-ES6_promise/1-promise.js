@@ -7,7 +7,7 @@ export default function getFullResponseFromAPI(success) {
         };
         resolve(response);
       } else {
-        const error = new Error('The fake API is not working currently');
+        const error = new Error('The API is fake  it does not response corrctly');
         reject(error);
       }
     });
