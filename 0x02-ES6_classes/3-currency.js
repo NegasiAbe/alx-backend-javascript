@@ -1,4 +1,4 @@
-class Currency {
+/*class Currency {
     constructor(code, name) {
       this._code = typeof code === 'string' ? code : '';
       this._name = typeof name === 'string' ? name : '';
@@ -30,5 +30,32 @@ class Currency {
     displayFullCurrency() {
       return `${this._name} (${this._code})`;
     }
+  }*/
+  export default class Currency {
+    constructor(code, name) {
+      this._code = code;
+      this._name = name;
+    }
+  
+    get name() {
+      return this._name;
+    }
+  
+    set name(n) {
+      this._name = n;
+    }
+  
+    get code() {
+      return this._code;
+    }
+  
+    set code(c) {
+      this._name = c;
+    }
+  
+    displayFullCurrency() {
+      return `${this.name} (${this.code})`;
+    }
   }
+
   
