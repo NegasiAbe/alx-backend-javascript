@@ -19,10 +19,10 @@ import uploadPhoto from './5-photo-reject.js';
     }*/
 
     export default function handleProfileSignup(firstName, lastName, fileName) {
-        const signUpUserPromise = signUpUser(firstName, lastName);
-        const uploadPhotoPromise = uploadPhoto(fileName);
+        const Promise1 = signUpUser(firstName, lastName);
+        const promise2 = uploadPhoto(fileName);
       
-        return Promise.allSettled([signUpUserPromise, uploadPhotoPromise]).then((values) => {
+        return Promise.allSettled([Promise1, Promise2]).then((values) => {
           const result = [];
           values.forEach((element) => {
             if (element.status === 'fulfilled') {
