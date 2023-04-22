@@ -1,11 +1,13 @@
-
 export default function iterateThroughObject(reportWithIterator) {
-    for (let key of reportWithIterator) {
-      console.log(`Category: ${key}`);
-      let employees = reportWithIterator[key];
-      for (let employee of employees) {
-        console.log(`Employee: ${employee}`);
-      }
+  let result = '';
+
+  for (const [index, employee] of Object.entries(reportWithIterator)) {
+    result += `${employee}`;
+
+    if (parseInt(index) !== reportWithIterator.length - 1) {
+      result += ' | ';
     }
   }
-  
+
+  return output;
+}
