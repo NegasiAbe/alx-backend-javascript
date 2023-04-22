@@ -1,5 +1,5 @@
 
-function iterateThroughObject(reportWithIterator) {
+export default function iterateThroughObject(reportWithIterator) {
     for (let key of reportWithIterator) {
       console.log(`Category: ${key}`);
       let employees = reportWithIterator[key];
