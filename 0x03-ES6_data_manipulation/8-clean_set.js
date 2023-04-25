@@ -1,7 +1,10 @@
-function cleanSet(set, startString) {
+export default function cleanSet(set, startString) {
+  if (startString === undefined) {
+    return '';
+  }
   const filteredValues = [];
   for (const value of set) {
-    if (startString && value.startsWith(startString)) {
+    if (value.startsWith(startString)) {
       filteredValues.push(value.substring(startString.length));
     }
   }
