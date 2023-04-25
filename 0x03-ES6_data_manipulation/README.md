@@ -1,1 +1,1 @@
-Javascript Array
+JavaScript Arrays
